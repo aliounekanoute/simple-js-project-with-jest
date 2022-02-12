@@ -1,9 +1,10 @@
-import {encrypt, decrypt} from "./src/cesar.js";
-
-
-
+import {
+    alassaneSowForm,
+    handleEncryptionButton,
+    handleDecryptionButton
+} from './src/alassane_sow/tp.js'
 const SignInForm = () => {
-  return `<div class="container mb-5 mt-5">
+    return `<div class="container mb-5 mt-5">
             <form id="sign-in-form">
                 <div class="uk-card uk-card-default uk-width-*">
 
@@ -35,7 +36,7 @@ const SignInForm = () => {
 }
 
 const MainPage = () => {
-  return `<div class="container mb-5 mt-5 main-page">
+    return `<div class="container mb-5 mt-5 main-page">
             <div class="uk-card uk-card-default uk-width-1-1@m mb-3">
               <div class="uk-card-header text-center">
                   <h3 class="uk-card-title">Jotaro kujo</h3>
@@ -49,22 +50,22 @@ const MainPage = () => {
 }
 
 const removeClassFromElement = (elementId, className) => {
-  const element = document.getElementById(elementId)
-  element.classList.remove(className)
+    const element = document.getElementById(elementId)
+    element.classList.remove(className)
 }
 
 const addClassToElement = (elementId, className) => {
-  const element = document.getElementById(elementId)
-  element.classList.add(className)
+    const element = document.getElementById(elementId)
+    element.classList.add(className)
 }
 
 const addContentToElement = (elementId, content) => {
-  const element = document.getElementById(elementId)
-  element.innerHTML = content
+    const element = document.getElementById(elementId)
+    element.innerHTML = content
 }
 
 const handleSignInForm = () => {
-  const $formWrapper = document.querySelector('#sign-in-form')
+    const $formWrapper = document.querySelector('#sign-in-form')
 
     $formWrapper.addEventListener('submit', (e) => {
         e.preventDefault()
@@ -72,20 +73,20 @@ const handleSignInForm = () => {
         const username = document.getElementById('username').value
         const password = document.getElementById('password').value
 
-        if(username == 'alioune' && password == 'passer') {
-          addContentToElement('error-msg', '')
-          addClassToElement('error-msg', 'hidden')
-          document.querySelector('#app').innerHTML = MainPage()
+        if (username == 'alioune' && password == 'passer') {
+            addContentToElement('error-msg', '')
+            addClassToElement('error-msg', 'hidden')
+            document.querySelector('#app').innerHTML = MainPage()
         } else {
-          const message = 'Username or password incorrect'
-          addContentToElement('error-msg', message)
-          removeClassFromElement('error-msg', 'hidden')
+            const message = 'Username or password incorrect'
+            addContentToElement('error-msg', message)
+            removeClassFromElement('error-msg', 'hidden')
         }
     })
 }
 
 const ViteDocumentation = () => {
-  return `
+    return `
   <h1>Hello Vite!</h1>
   <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
 `
@@ -100,7 +101,14 @@ document.querySelector('#app').innerHTML = SignInForm()
 
 handleSignInForm()
 
-const word = encrypt('Hello, world!', 100)
-console.log(decrypt(word, 100))
+const alassaneExercise = () => {
+    document.querySelector('#buttons').innerHTML = `<button type="button" id="alassane_button" class="btn btn-primary">Alassane Sow </button>`
+    const alassane_button = document.getElementById('alassane_button')
+    alassane_button.addEventListener('click', () => {
+        document.querySelector('#app').innerHTML = alassaneSowForm()
+        handleEncryptionButton()
+        handleDecryptionButton()
+    })
+}
 
-console.log(word)
+alassaneExercise()
