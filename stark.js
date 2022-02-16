@@ -75,7 +75,7 @@ const DecryptForm = () => {
 }
 
 const HomePage = () => {
-  return '<h1 class="mainTitle">Welcome to Ceasar\'s Palace !</h1>' + EncryptForm() + '<br>' + DecryptForm()
+  return '<h1 class="mainTitle">Welcome to Ceasar\'s Palace ! .</h1>' + EncryptForm() + '<br>' + DecryptForm()
 }
 
 const removeClassFromElement = (elementId, className) => {
