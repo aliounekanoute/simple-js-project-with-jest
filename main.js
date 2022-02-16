@@ -105,7 +105,9 @@ document.querySelector('#app').innerHTML = SignInForm()
 handleSignInForm()
 
 const robertExercise = () => {
-    document.querySelector('#buttons').innerHTML = `<button type="button" id="robert_button" class="btn btn-primary">Robert adonsou </button>`
+    const button = document.createElement('div')
+    button.innerHTML = `<button type="button" id="robert_button" class="btn uk-button-primary btn-block">Robert adonsou </button>`
+    document.querySelector('#buttons').appendChild(button) 
     const robert_button = document.getElementById('robert_button')
     robert_button.addEventListener('click', () => {
         document.querySelector('#app').innerHTML = adonsou_robertForm()
@@ -117,7 +119,9 @@ const robertExercise = () => {
 robertExercise()
 
 const ecksonExercise = () => {
-    document.querySelector('#buttons').innerHTML = `<div class="row"><button name="ecksonButton" id="ecksonButton" class="btn uk-button-primary btn-block" >Eckson Glitho</button></div>`
+    const button = document.createElement('div')
+    button.innerHTML = `<div class="row mt-2"><button name="ecksonButton" id="ecksonButton" class="btn uk-button-primary btn-block" >Eckson Glitho</button></div>`
+    document.querySelector('#buttons').appendChild(button) 
     const ecksonButton = document.getElementById('ecksonButton')
     ecksonButton.addEventListener('click', () => {
         document.querySelector('#app').innerHTML = ecksonGlitho()
