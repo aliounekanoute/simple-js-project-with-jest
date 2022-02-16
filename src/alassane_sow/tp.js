@@ -29,7 +29,7 @@ export const handleEncryptionButton = () => {
     button.addEventListener('click', () => {
         const phrase = document.getElementById('phrase').value
         const nombre = document.getElementById('nombre').value
-        const result = encrypt(phrase, nombre)
+        const result = encrypt(phrase, parseInt(nombre))
         document.getElementById('result').innerHTML = result
     })
 
@@ -41,7 +41,7 @@ export const handleDecryptionButton = () => {
     button.addEventListener('click', () => {
         const phrase = document.getElementById('phrase').value
         const nombre = document.getElementById('nombre').value
-        const result = decrypt(phrase, nombre)
+        const result = decrypt(phrase, parseInt(nombre))
         console.log(result)
         document.getElementById('result').innerHTML = result
     })
