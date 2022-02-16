@@ -1,3 +1,4 @@
+const { client } = require("nightwatch")
 
 module.exports = {
     test: client => {

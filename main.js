@@ -1,6 +1,10 @@
 import {encrypt, decrypt} from "./src/cesar.js";
 
-
+import {
+  ecksonGlitho,
+  handleEncryptionButton,
+  handleDecryptionButton
+} from './src/eckson_glitho/tp.js'
 
 const SignInForm = () => {
   return `<div class="container mb-5 mt-5">
@@ -91,16 +95,18 @@ const ViteDocumentation = () => {
 `
 }
 
-
-
-
-
-
 document.querySelector('#app').innerHTML = SignInForm()
 
 handleSignInForm()
 
-const word = encrypt('Hello, world!', 100)
-console.log(decrypt(word, 100))
+const ecksonExercise = () => {
+    document.querySelector('#buttons').innerHTML = `<div class="row"><button name="ecksonButton" id="ecksonButton" class="btn uk-button-primary btn-block" >Eckson Glitho</button></div>`
+    const ecksonButton = document.getElementById('ecksonButton')
+    ecksonButton.addEventListener('click', () => {
+        document.querySelector('#app').innerHTML = ecksonGlitho()
+        handleEncryptionButton()
+        handleDecryptionButton()
+    })
+}
 
-console.log(word)
+ecksonExercise()
