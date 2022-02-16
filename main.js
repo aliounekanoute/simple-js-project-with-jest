@@ -2,7 +2,7 @@ import {
     adonsou_robertForm,
     handleEncryptionButton,
     handleDecryptionButton
-} from './src/adonsou_robert_yao/tp.js'
+} from './src/adonsou_yao_robert/tp.js'
 const SignInForm = () => {
     return `<div class="container mb-5 mt-5">
           <form id="sign-in-form">
@@ -102,7 +102,7 @@ document.querySelector('#app').innerHTML = SignInForm()
 handleSignInForm()
 
 const robertExercise = () => {
-    document.querySelector('#buttons').innerHTML = `<button type="button" id="alassane_button" class="btn btn-primary">Alassane Sow </button>`
+    document.querySelector('#buttons').innerHTML = `<button type="button" id="robert_button" class="btn btn-primary">Robert adonsou </button>`
     const robert_button = document.getElementById('robert_button')
     robert_button.addEventListener('click', () => {
         document.querySelector('#app').innerHTML = adonsou_robertForm()

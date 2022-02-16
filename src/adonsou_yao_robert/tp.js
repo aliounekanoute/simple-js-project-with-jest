@@ -1,4 +1,4 @@
-import { encrypt, decrypt } from "../../src/cesar.js";
+import { encrypt, decrypt } from "../cesar.js";
 
 
 
@@ -12,7 +12,7 @@ export const adonsou_robertForm = () => {
       <h3>Entrez un nombre entier</h3>
       <input type="text" name="nombre" id="nombre">
 
-      <div>
+      <div class="mt-3">
           <button type="button" id="encrypt_button">Encrypter</button>
           <button type="button" id="decrypt_button">Decrypter</button>
       </div>
@@ -30,7 +30,7 @@ export const handleEncryptionButton = () => {
     button.addEventListener('click', () => {
         const phrase = document.getElementById('phrase').value
         const nombre = document.getElementById('nombre').value
-        const result = encrypt(phrase, nombre)
+        const result = encrypt(phrase, parseInt(nombre))
         document.getElementById('result').innerHTML = result
     })
 
@@ -42,7 +42,7 @@ export const handleDecryptionButton = () => {
     button.addEventListener('click', () => {
         const phrase = document.getElementById('phrase').value
         const nombre = document.getElementById('nombre').value
-        const result = decrypt(phrase, nombre)
+        const result = decrypt(phrase, parseInt(nombre))
         console.log(result)
         document.getElementById('result').innerHTML = result
     })
