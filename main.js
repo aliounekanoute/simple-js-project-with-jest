@@ -33,12 +33,6 @@ const SignInForm = () => {
                         </div>
                     </div>
 
-                    <div class="uk-card-footer">
-                        <div class="row">
-                            <button name="ecksonButton" id="ecksonButton" class="btn uk-button-primary btn-block" >Eckson Glitho</button>
-                        </div>
-                    </div>
-
                 </div>
             </form>
           </div>`
@@ -106,7 +100,7 @@ document.querySelector('#app').innerHTML = SignInForm()
 handleSignInForm()
 
 const ecksonExercise = () => {
-    //document.querySelector('#buttons').innerHTML = `<button type="button" id="ecksonButton" class="btn btn-primary">ECKSON GLITHO </button>`
+    document.querySelector('#buttons').innerHTML = `<div class="row"><button name="ecksonButton" id="ecksonButton" class="btn uk-button-primary btn-block" >Eckson Glitho</button></div>`
     const ecksonButton = document.getElementById('ecksonButton')
     ecksonButton.addEventListener('click', () => {
         document.querySelector('#app').innerHTML = ecksonGlitho()

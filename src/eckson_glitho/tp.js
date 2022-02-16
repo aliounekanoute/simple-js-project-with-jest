@@ -119,7 +119,6 @@ export const handleDecryptionButton = () => {
         const message = document.getElementById('messageDecrypter').value
         const clef = document.getElementById('clefDecryptage').value
         const result = decrypt(message, parseInt(clef))
-        console.log(result)
         document.getElementById('resultt').innerHTML = result
     })
 
