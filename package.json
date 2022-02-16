@@ -25,7 +25,6 @@
     "jest-html-reporter": "^3.4.2",
     "vite": "^2.7.2"
   },
-  
   "dependencies": {
     "nightwatch": "^2.0.7"
   }
