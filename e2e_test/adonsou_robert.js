@@ -3,7 +3,8 @@ const { client } = require("nightwatch")
 module.exports = {
     test: client => {
         client
-            .url('http://localhost:4173/')
+            .url('http://127.0.0.1:5501/vite-project/index.html')
+            .click('#robert_button')
             .assert.visible('#phrase')
             .assert.visible('#nombre')
             .assert.visible('#encrypt_button')
