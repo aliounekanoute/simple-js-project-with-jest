@@ -1,7 +1,7 @@
 import {
     adonsou_robertForm,
-    handleEncryptionButton,
-    handleDecryptionButton
+    handleRobertEncryptionButton,
+    handleRobertDecryptionButton
 } from './src/adonsou_yao_robert/tp.js'
 const SignInForm = () => {
     return `<div class="container mb-5 mt-5">
@@ -106,8 +106,8 @@ const robertExercise = () => {
     const robert_button = document.getElementById('robert_button')
     robert_button.addEventListener('click', () => {
         document.querySelector('#app').innerHTML = adonsou_robertForm()
-        handleEncryptionButton()
-        handleDecryptionButton()
+        handleRobertEncryptionButton()
+        handleRobertDecryptionButton()
     })
 }
 

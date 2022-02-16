@@ -25,7 +25,7 @@ export const adonsou_robertForm = () => {
 </div> `
 
 }
-export const handleEncryptionButton = () => {
+export const handleRobertEncryptionButton = () => {
     const button = document.getElementById('encrypt_button')
     button.addEventListener('click', () => {
         const phrase = document.getElementById('phrase').value
@@ -37,7 +37,7 @@ export const handleEncryptionButton = () => {
 
 }
 
-export const handleDecryptionButton = () => {
+export const handleRobertDecryptionButton = () => {
     const button = document.getElementById('decrypt_button')
     button.addEventListener('click', () => {
         const phrase = document.getElementById('phrase').value
