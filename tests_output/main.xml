@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="0">
+
+  <testsuite name="main"
+    errors="1" failures="0" hostname="" id="" package="main" skipped="1"
+    tests="0" time="0.000" timestamp="">
+  
+
+  
+    <system-err>
+      
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                                                                                      │
+│    Error: EdgeDriver cannot be found in the current project.                                         │
+│                                                                                                      │
+│    Please download it from https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/,    │
+│   extract the archive and set &#34;webdriver.server_path&#34; config option to point to the binary file.     │
+│                                                                                                      │
+│                                                                                                      │
+│                                                                                                      │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+    </system-err>
+  
+
+    
+    <error message="EdgeDriver cannot be found in the current project."><![CDATA[
+      Error: EdgeDriver cannot be found in the current project.
+    at EdgeServiceBuilder.getStartupErrorMessage (C:\xampp\htdocs\simple-js-project-with-jest\node_modules\nightwatch\lib\transport\selenium-webdriver\service-builders\base-service.js:193:26)
+    at new BaseService (C:\xampp\htdocs\simple-js-project-with-jest\node_modules\nightwatch\lib\transport\selenium-webdriver\service-builders\base-service.js:77:18)
+    at new EdgeServiceBuilder (C:\xampp\htdocs\simple-js-project-with-jest\node_modules\nightwatch\lib\transport\selenium-webdriver\service-builders\edge.js:4:1)
+    at ChromeDriver.createDriverService (C:\xampp\htdocs\simple-js-project-with-jest\node_modules\nightwatch\lib\transport\selenium-webdriver\index.js:168:28)
+    at ChromeDriver.createSession (C:\xampp\htdocs\simple-js-project-with-jest\node_modules\nightwatch\lib\transport\selenium-webdriver\index.js:213:18)
+    at NightwatchClient.createSession (C:\xampp\htdocs\simple-js-project-with-jest\node_modules\nightwatch\lib\core\client.js:633:27)
+    at TestSuite.createSession (C:\xampp\htdocs\simple-js-project-with-jest\node_modules\nightwatch\lib\testsuite\index.js:406:24)
+    at TestSuite.startTestSuite (C:\xampp\htdocs\simple-js-project-with-jest\node_modules\nightwatch\lib\testsuite\index.js:420:17)
+    at TestSuite.runTestSuite (C:\xampp\htdocs\simple-js-project-with-jest\node_modules\nightwatch\lib\testsuite\index.js:445:17)
+    at TestSuite.run (C:\xampp\htdocs\simple-js-project-with-jest\node_modules\nightwatch\lib\testsuite\index.js:897:17)
+      ]]></error>  
+
+  
+    
+    <testcase
+      name="test" classname="main">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>
