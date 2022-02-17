@@ -1,8 +1,7 @@
-
 export const sayHello = name => {
     let response = 'Hello, World'
 
-    if(name) {
+    if (name) {
         response = `Hello, ${name}`
     }
 

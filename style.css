@@ -1,8 +1,40 @@
+html{
+  margin-bottom: 0%;
+}
+
+body{
+  margin: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
+}
+.form-label{
+  text-align: start;
+}
+
+.jumbotron{
+  background-color:#161B1B;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.container.rounded-pill{
+  background-color:rgb(20, 26, 25);
+  padding-top: 10px;
+  padding-bottom: 1px;
+  text-align: center;
+}
+
+.arrow_down{
+  color:white;
+}
+.bi.bi-arrow-down-square{
+  color:#161B1B;
+  font-size: 45px;
+  
 }

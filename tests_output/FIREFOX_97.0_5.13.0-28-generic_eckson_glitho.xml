@@ -5,9 +5,9 @@
 
   <testsuite name="eckson_glitho"
     errors="0" failures="0" hostname="" id="" package="eckson_glitho" skipped="0"
-    tests="1" time="6.393" timestamp="">
+    tests="1" time="5.807" timestamp="">
   
-    <testcase name="test" classname="eckson_glitho" time="6.393" assertions="4">
+    <testcase name="test" classname="eckson_glitho" time="5.807" assertions="4">
 
     
 
