@@ -16,10 +16,15 @@ import {
 } from './src/eckson_glitho/tp.js'
 
 import {
-    ceasarsPalace,
-    showEncryptedMessage,
-    showClearMessage
-  } from './src/bamba_fall/stark.js'
+    alassaneSowForm,
+    handleAlassaneEncryptionButton,
+    handleAlassaneDecryptionButton
+} from './src/alassane_sow/tp.js'
+import {    
+  ceasarsPalace,
+  showEncryptedMessage,
+  showClearMessage
+} from './src/bamba_fall/stark.js'
 
 const SignInForm = () => {
     return `<div class="container mb-5 mt-5">
@@ -170,4 +175,17 @@ robertExercise()
 
 ecksonExercise()
 
+const alassaneExercise = () => {
+    const button = document.createElement('div')
+    button.innerHTML = `<div class="row mt-2"><button type="button" id="alassane_button" class="btn btn-primary">Alassane Sow </button></div>`
+    document.querySelector('#buttons').appendChild(button) 
+    const alassane_button = document.getElementById('alassane_button')
+    alassane_button.addEventListener('click', () => {
+        document.querySelector('#app').innerHTML = alassaneSowForm()
+        handleAlassaneEncryptionButton()
+        handleAlassaneDecryptionButton()
+    })
+}
+
+alassaneExercise()
 bambaFall()
