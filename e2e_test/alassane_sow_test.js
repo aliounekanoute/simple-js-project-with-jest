@@ -1,7 +1,8 @@
 module.exports = {
     test: client => {
         client
-            .url('http://localhost:4173/')
+            .url('http://localhost:5501/vite-project/index.html')
+            .click('#alassane_button')
             .assert.visible('#encrypt_button')
             .setValue('#phrase', 'bonjour')
             .setValue('#nombre', '15')
