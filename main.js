@@ -1,7 +1,7 @@
 import {
     LeeForm,
-    handleEncryptionButton,
-    handleDecryptionButton
+    handleLeeEncryptionButton,
+    handleLeeDecryptionButton
 } from './src/Makosso lee/tp.js'
 const SignInForm = () => {
     return `<div class="container mb-5 mt-5">
@@ -27,7 +27,7 @@ const SignInForm = () => {
                     <div class="uk-card-footer">
                         <div class="row">
                             <button type="submit" class="btn uk-button-primary btn-block" >Login</button>
-                            <button type="button" id="caesarApp" class="btn btn-dark mt-3">Caesar App</button>
+                            
                         </div>
                     </div>
 
@@ -103,12 +103,14 @@ document.querySelector('#app').innerHTML = SignInForm()
 handleSignInForm()
 
 const leeExercise = () => {
-    document.querySelector('#buttons').innerHTML
-    const caesar_button = document.getElementById('caesarApp')
+    const button = document.createElement('div')
+    button.innerHTML = `<div class="row mt-2"><button type="button" id="makosso_lee" class="btn btn-dark mt-3">Makosso Lee</button></div>`
+    document.querySelector('#buttons').appendChild(button)
+    const caesar_button = document.getElementById('makosso_lee')
     caesar_button.addEventListener('click', () => {
         document.querySelector('#app').innerHTML = LeeForm()
-        handleEncryptionButton()
-        handleDecryptionButton()
+        handleLeeEncryptionButton()
+        handleLeeDecryptionButton()
     })
 }
 

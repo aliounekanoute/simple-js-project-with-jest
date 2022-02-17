@@ -86,7 +86,7 @@ export const LeeForm = () => {
 }
 
 
-export const handleEncryptionButton = () => {
+export const handleLeeEncryptionButton = () => {
     const button = document.getElementById('encrypt_button')
     button.addEventListener('click', () => {
         const message = document.getElementById('message').value
@@ -98,7 +98,7 @@ export const handleEncryptionButton = () => {
 
 }
 
-export const handleDecryptionButton = () => {
+export const handleLeeDecryptionButton = () => {
     const button = document.getElementById('decrypt_button')
     button.addEventListener('click', () => {
         const message = document.getElementById('message').value

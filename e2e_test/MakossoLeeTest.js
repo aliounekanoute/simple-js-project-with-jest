@@ -1,9 +1,10 @@
 module.exports = {
     test: client => {
         client
-            .url('http://localhost:4173')
+            .url('http://127.0.0.1:5501/vite-project/index.html')
             .waitForElementVisible('#app', 10 * 1000)
-            .assert.visible('#caesarApp')
+            .assert.visible('#makosso_lee')
+            .click('#makosso_lee')
             .assert.visible('#message')
             .assert.visible('#key')
             .assert.visible('#encrypt_button')
