@@ -3,13 +3,18 @@ import {
     handleRobertEncryptionButton,
     handleRobertDecryptionButton
 } from './src/adonsou_yao_robert/tp.js'
-import {encrypt, decrypt} from "./src/cesar.js";
 
 import {
   ecksonGlitho,
   handleEncryptionButton,
   handleDecryptionButton
 } from './src/eckson_glitho/tp.js'
+
+import {
+    alassaneSowForm,
+    handleAlassaneEncryptionButton,
+    handleAlassaneDecryptionButton
+} from './src/alassane_sow/tp.js'
 
 const SignInForm = () => {
     return `<div class="container mb-5 mt-5">
@@ -131,3 +136,17 @@ const ecksonExercise = () => {
 }
 
 ecksonExercise()
+
+const alassaneExercise = () => {
+    const button = document.createElement('div')
+    button.innerHTML = `<div class="row mt-2"><button type="button" id="alassane_button" class="btn btn-primary">Alassane Sow </button></div>`
+    document.querySelector('#buttons').appendChild(button) 
+    const alassane_button = document.getElementById('alassane_button')
+    alassane_button.addEventListener('click', () => {
+        document.querySelector('#app').innerHTML = alassaneSowForm()
+        handleAlassaneEncryptionButton()
+        handleAlassaneDecryptionButton()
+    })
+}
+
+alassaneExercise()
