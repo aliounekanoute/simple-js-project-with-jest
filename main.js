@@ -1,4 +1,9 @@
 import {
+    LeeForm,
+    handleLeeEncryptionButton,
+    handleLeeDecryptionButton
+} from './src/Makosso lee/tp.js'
+import {
     adonsou_robertForm,
     handleRobertEncryptionButton,
     handleRobertDecryptionButton
@@ -15,6 +20,11 @@ import {
     handleAlassaneEncryptionButton,
     handleAlassaneDecryptionButton
 } from './src/alassane_sow/tp.js'
+import {    
+  ceasarsPalace,
+  showEncryptedMessage,
+  showClearMessage
+} from './src/bamba_fall/stark.js'
 
 const SignInForm = () => {
     return `<div class="container mb-5 mt-5">
@@ -107,11 +117,23 @@ const ViteDocumentation = () => {
 
 document.querySelector('#app').innerHTML = SignInForm()
 
-handleSignInForm()
 
+const leeExercise = () => {
+    const button = document.createElement('div')
+    button.innerHTML = `<div class="row mt-2"><button type="button" id="makosso_lee" class="btn btn-dark mt-3">Makosso Lee</button></div>`
+    document.querySelector('#buttons').appendChild(button)
+    const caesar_button = document.getElementById('makosso_lee')
+    caesar_button.addEventListener('click', () => {
+        document.querySelector('#app').innerHTML = LeeForm()
+        handleLeeEncryptionButton()
+        handleLeeDecryptionButton()
+    })
+}
+
+leeExercise()
 const robertExercise = () => {
     const button = document.createElement('div')
-    button.innerHTML = `<button type="button" id="robert_button" class="btn uk-button-primary btn-block">Robert adonsou </button>`
+    button.innerHTML = `<div class="row mt-2"><button type="button" id="robert_button" class="btn uk-button-primary btn-block">Robert adonsou </button></div>`
     document.querySelector('#buttons').appendChild(button) 
     const robert_button = document.getElementById('robert_button')
     robert_button.addEventListener('click', () => {
@@ -120,8 +142,6 @@ const robertExercise = () => {
         handleRobertDecryptionButton()
     })
 }
-
-robertExercise()
 
 const ecksonExercise = () => {
     const button = document.createElement('div')
@@ -134,6 +154,24 @@ const ecksonExercise = () => {
         handleDecryptionButton()
     })
 }
+
+const bambaFall = () => {
+
+    const bambasSection = document.createElement('div')
+    bambasSection.innerHTML = `<div class="row mt-2"><button id="starkButton" class="btn btn-outline-success btn-sm">Bamba Fall</button></div>`
+    document.querySelector('#buttons').appendChild(bambasSection) 
+    const goToBamba = document.getElementById('starkButton')
+    goToBamba.addEventListener('click', () => {
+        document.querySelector('#app').innerHTML = ceasarsPalace()
+        showEncryptedMessage()
+        showClearMessage()
+    })
+
+}
+
+handleSignInForm()
+
+robertExercise()
 
 ecksonExercise()
 
@@ -150,3 +188,4 @@ const alassaneExercise = () => {
 }
 
 alassaneExercise()
+bambaFall()
