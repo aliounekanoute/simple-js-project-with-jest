@@ -1,32 +1,33 @@
 {
-  "name": "vite-project",
-  "author": {
-    "name": "Alioune Kanoute",
-    "email": "aliounekanoute@gmail.com"
-  },
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test": "jest",
-    "e2eTest": "nightwatch"
-  },
-  "devDependencies": {
-    "@babel/preset-env": "^7.16.11",
-    "@testing-library/dom": "^8.11.3",
-    "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.4.0",
-    "babel-jest": "^27.5.0",
-    "chromedriver": "^91.0.1",
-    "geckodriver": "^2.0.0",
-    "jest": "^27.5.0",
-    "jest-html-reporter": "^3.4.2",
-    "vite": "^2.7.2"
-  },
-  
-  "dependencies": {
-    "nightwatch": "^2.0.7"
-  }
+
+    "name": "vite-project",
+    "author": {
+        "name": "Alioune Kanoute",
+        "email": "aliounekanoute@gmail.com"
+    },
+    "version": "0.0.0",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "test": "jest",
+        "e2eTest": "nightwatch"
+    },
+    "devDependencies": {
+        "@babel/preset-env": "^7.16.11",
+        "@testing-library/dom": "^8.11.3",
+        "@testing-library/jest-dom": "^5.16.2",
+        "@testing-library/user-event": "^13.5.0",
+        "@types/jest": "^27.4.0",
+        "babel-jest": "^27.5.0",
+        "chromedriver": "^91.0.1",
+        "geckodriver": "^2.0.0",
+        "jest": "^27.5.0",
+        "jest-html-reporter": "^3.4.2",
+        "vite": "^2.7.2"
+    },
+
+    "dependencies": {
+        "nightwatch": "^2.0.7"
+    }
 }
