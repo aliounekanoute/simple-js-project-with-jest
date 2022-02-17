@@ -3,13 +3,18 @@ import {
     handleRobertEncryptionButton,
     handleRobertDecryptionButton
 } from './src/adonsou_yao_robert/tp.js'
-import {encrypt, decrypt} from "./src/cesar.js";
 
 import {
   ecksonGlitho,
   handleEncryptionButton,
   handleDecryptionButton
 } from './src/eckson_glitho/tp.js'
+
+import {
+    ceasarsPalace,
+    showEncryptedMessage,
+    showClearMessage
+  } from './src/bamba_fall/stark.js'
 
 const SignInForm = () => {
     return `<div class="container mb-5 mt-5">
@@ -102,7 +107,6 @@ const ViteDocumentation = () => {
 
 document.querySelector('#app').innerHTML = SignInForm()
 
-handleSignInForm()
 
 const robertExercise = () => {
     const button = document.createElement('div')
@@ -116,8 +120,6 @@ const robertExercise = () => {
     })
 }
 
-robertExercise()
-
 const ecksonExercise = () => {
     const button = document.createElement('div')
     button.innerHTML = `<div class="row mt-2"><button name="ecksonButton" id="ecksonButton" class="btn uk-button-primary btn-block" >Eckson Glitho</button></div>`
@@ -130,4 +132,24 @@ const ecksonExercise = () => {
     })
 }
 
+const bambaFall = () => {
+
+    const bambasSection = document.createElement('div')
+    bambasSection.innerHTML = `<div class="row mt-2"><button id="starkButton" class="btn btn-outline-success btn-sm">Bamba Fall</button></div>`
+    document.querySelector('#buttons').appendChild(bambasSection) 
+    const goToBamba = document.getElementById('starkButton')
+    goToBamba.addEventListener('click', () => {
+        document.querySelector('#app').innerHTML = ceasarsPalace()
+        showEncryptedMessage()
+        showClearMessage()
+    })
+
+}
+
+handleSignInForm()
+
+robertExercise()
+
 ecksonExercise()
+
+bambaFall()
